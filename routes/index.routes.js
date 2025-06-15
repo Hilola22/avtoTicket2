@@ -7,14 +7,26 @@ const busDriverRouter = require("./bus_driver.routes");
 const driversRouter = require("./drivers.routes");
 const districtsRouter = require("./districts.routes");
 const regionsRouter = require("./regions.routes");
+const paymentRouter = require("./payment.routes");
+const scheduleRouter = require("./bus_schedules.routes");
+const busRouteRouter = require("./route.routes");
+const subRouteRouter = require("./sub_route.routes");
+const routeStopRouter = require("./route_stop.routes");
+const ticketPassangerRouter = require("./ticket_passanger.routes");
 
 router.use("/users", userRouter);
 router.use("/user-role", userRoleRouter);
-router.use("/role", roleRouter);
+router.use("/roles", roleRouter);
 router.use("/buses", busesRouter);
 router.use("/bus-driver", busDriverRouter);
 router.use("/drivers", driversRouter);
 router.use("/districts", districtsRouter);
 router.use("/regions", regionsRouter);
+router.use("/payments", paymentRouter);
+router.use("/schedules", scheduleRouter);
+router.use("/routes", busRouteRouter);
+router.use("/sub-routes", subRouteRouter);
+router.use("/route-stop", routeStopRouter);
+router.use("/passangers", ticketPassangerRouter);
 
 module.exports = router;

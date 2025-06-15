@@ -13,7 +13,7 @@ app.use("/api", indexRouter);
 async function start() {
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ alter: true });
+    await sequelize.sync({ force: true });
 
     app.listen(PORT, () => {
       console.log(`Server started at: http://localhost:${PORT}`);
